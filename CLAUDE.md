@@ -16,6 +16,14 @@ This repository hosts **Reel Studio** (RC1.10, EL COACH edition): Abdulrahman's 
    Expect 67 passed / 0 failed / 4 skipped. Never upgrade pinned versions.
 3. New footage uploaded → `MASTER_WORKFLOW.md` stage 0 onward. Do not edit anything unless the creator asked for production.
 
+## ⛔ Permanent creator rule — NEVER modify the footage (2026-11-01)
+Never change the original footage's colour, white balance, lighting, exposure, brightness, contrast, saturation, highlights/shadows,
+sharpness, noise/grain, and never apply a LUT, grade, filter or "look" — not subtly, not to "fix" it, not on finished reels brought back for changes.
+Edit only what surrounds the footage: cuts/timing, text, captions, graphics, transitions, framing (punch-ins/reframes), sound and music.
+Only technical exceptions: a high-quality re-encode (no sharpening/denoise), and for HDR (iPhone HLG) sources the single neutral standard
+HDR→SDR conversion with no adjustments (reel-studio/docs/BRAND.md § Photographic treatment) — state it in the delivery report.
+If the footage looks wrong, tell the creator; never correct it unasked. This rule overrides any older note that mentions grading.
+
 ## Hard rules (summary — full list in reel-studio/CLAUDE.md)
 - This GitHub repo is **PUBLIC**: never commit or push footage, renders, voice files, brand assets, transcripts or the studio itself unless the creator explicitly decides so.
 - No music unless asked. Never invent or rewrite the creator's Arabic. Never overwrite `deliveries/`, `releases/` or approved masters.
