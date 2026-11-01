@@ -1,0 +1,22 @@
+# The studio itself stays local until the creator decides where it may be stored (repo is PUBLIC).
+# Remove this line only after that decision (see reel-studio/DEPLOYMENT.md §9).
+reel-studio/
+
+# Machine-specific runtimes (rebuilt by engine/setup.sh + npm ci)
+reel-studio/.venv/
+reel-studio/.hf/
+reel-studio/models/
+node_modules/
+__pycache__/
+
+# Reel projects and all media — this repository is PUBLIC
+reel-studio/reels/
+*.mp4
+*.mov
+*.m4a
+*.wav
+*.webm
+*.zip
+*.b64.txt
+# …except the engine's own synthetic SFX library (part of the studio, not creator media)
+!reel-studio/engine/assets/audio/**/*.wav
