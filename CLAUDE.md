@@ -20,12 +20,23 @@ This repository hosts **Reel Studio** (RC1.10, EL COACH edition): Abdulrahman's 
 Never change the original footage's colour, white balance, lighting, exposure, brightness, contrast, saturation, highlights/shadows,
 sharpness, noise/grain, and never apply a LUT, grade, filter or "look" — not subtly, not to "fix" it, not on finished reels brought back for changes.
 Edit only what surrounds the footage: cuts/timing, text, captions, graphics, transitions, framing (punch-ins/reframes), sound and music.
-Only technical exceptions: a high-quality re-encode (no sharpening/denoise), and for HDR (iPhone HLG) sources the single neutral standard
-HDR→SDR conversion with no adjustments (reel-studio/docs/BRAND.md § Photographic treatment) — state it in the delivery report.
+Only technical exception: a high-quality re-encode (no sharpening/denoise). HDR (iPhone HLG) sources stay HDR and untouched: graphics are
+rendered alone (`GEN.overlay`, alpha MOV) and composited onto the original footage in 10-bit, delivered as HEVC Main10 HLG
+(reference: `reel-studio/reels/reel-1102/build/composite.sh`). Verify on the delivered file that graphic-free footage is unchanged.
 If the footage looks wrong, tell the creator; never correct it unasked. This rule overrides any older note that mentions grading.
+
+## ✅ Approved editing standard (creator approval, 2026-11-01)
+Reference: **reel-1102 v2** — Adam transformation, HDR (`deliveries/v2/final_reel.mp4`, MD5 `4abed917d73a76f2bdaaabf718556942`). Never modify it.
+1. **RAW footage preserved** — footage, lighting, exposure, contrast, colour, skin texture and image quality untouched (rule above).
+2. **Creative editing at that level** — hand-designed typography, word-by-word captions with the spoken word in lime, cards with a lime edge,
+   pills, checklists that grow with the words, counters, purposeful graphic transitions, framed end card — all as layers over the footage
+   (reference build: `reel-studio/reels/reel-1102/build/gfx.mjs`).
+3. **No creative simplification** — footage preservation is never a reason for basic captions or simple editing.
+4. **Video-specific direction** — every new video gets its own creative concept from its own content, at the same quality. Never copy reel-1102's devices blindly.
+5. **Workflow** — the creator sends footage + instructions; analyse → plan → build → verify (footage unchanged, captions, audio gates) → deliver.
 
 ## Hard rules (summary — full list in reel-studio/CLAUDE.md)
 - This GitHub repo is **PUBLIC**: never commit or push footage, renders, voice files, brand assets, transcripts or the studio itself unless the creator explicitly decides so.
-- No music unless asked. Never invent or rewrite the creator's Arabic. Never overwrite `deliveries/`, `releases/` or approved masters.
+- Music: a low, licensed bed under the voice on every reel (voice ≥ 18 dB above it; credit in the caption). Never invent or rewrite the creator's Arabic. Never overwrite `deliveries/`, `releases/` or approved masters.
 - Report only measured results; unverified = UNKNOWN. Audio is never "approved" until the creator has listened.
 - No paid services, global config changes or new packages without approval.
